@@ -19,3 +19,5 @@ Created with Create React App - (https://github.com/facebook/create-react-app/)
 Open for code review & pull requests after the challenge has been submitted, reviewed, and passed all requirements for the completion of my certificate.
 
 ## Resources
+1. Google Maps Dependency - https://tomchentw.github.io/react-google-maps/#introduction
+2. Helpful video from Grace Hopper Academy  - https://www.youtube.com/watch?v=LRptz31H0vI
