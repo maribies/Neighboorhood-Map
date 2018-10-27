@@ -8,6 +8,7 @@ class InfoBar extends Component {
 
   updateQuery = (checkQuery) => {
   this.setState({query: checkQuery})
+  this.props.onSearch(checkQuery)
   }
 
   render() {
