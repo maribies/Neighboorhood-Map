@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import MyMapComponent from './map';
+import InfoBar from './InfoBar';
 
 class App extends Component {
+  state = {
+    query: ''
+  }
+
+  getQuery(query){
+    this.setState({query})
+  }
+
   componentDidMount(){
 
   }
@@ -10,6 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>My Neighborhood Map</h1>
+        <InfoBar query={this.getQuery}/>
           <MyMapComponent
             isMarkerShown
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
