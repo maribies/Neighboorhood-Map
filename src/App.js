@@ -5,8 +5,12 @@ import InfoBar from './InfoBar';
 import * as UnsplashAPI from './UnsplashAPI';
 
 const locations = [
-  { name: 'Riberia', lat: 41.140473, lng: -8.612381 },
-  { name: 'Alidos', lat: 41.148183, lng: -8.611051 }
+  { name: 'Ribeira', lat: 41.140473, lng: -8.612381 },
+  { name: 'Aliados', lat: 41.148183, lng: -8.611051 },
+  { name: 'Matosinhos', lat: 41.174567, lng: -8.690689 },
+  { name: 'Foz', lat: 41.147474, lng: -8.674626 },
+  { name: 'Hood', lat: 41.145861, lng: -8.599972 },
+
 ]
 
 class App extends Component {
@@ -26,35 +30,11 @@ class App extends Component {
         showError: true
       })
     })
-
-    // UnsplashAPI.getCollection()
-    // .then((res) => {
-    //   this.setState({imagesCollection})
-    // })
   }
 
   getQuery(query){
     this.setState({query})
   }
-
-  // getImage = (id, size) => {
-  //   UnsplashAPI.getPhotoById()
-  //   .then((image) => {
-  //     this.setState(state => ({image: image.urls.thumb})
-  //   )
-  //   })
-  // }
-
-  // searchImages = ( query ) => {
-  //   UnsplashAPI.getImage( query ).then((image) => {
-  //     this.setState({ image })
-  //   }).catch(error => {
-  //     this.setState({
-  //       showError: true
-  //     })
-  //   })
-  // }
-
 
   render() {
     return (
