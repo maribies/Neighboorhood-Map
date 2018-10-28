@@ -1,14 +1,22 @@
-import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, InfoWindow } from "react-google-maps";
 import React from 'react';
 import MyMarker from './MyMarker';
 
 const MyMap = withScriptjs(withGoogleMap((props) => {
 
+  console.log('props', props)
+  console.log('prop', props.isOpen)
+
   const markers = props.locations.map (loc =>
     <MyMarker key={loc.name}
     name={loc.name}
     location= {{lat:loc.lat, lng: loc.lng }}
-    />
+    >
+    {props.isOpen &&
+      <InfoWindow onCloseClick={ props.toggle }>
+        <div id="infowindow">Enter Content here</div>
+      </InfoWindow> }
+    </MyMarker>
   );
 
   return (

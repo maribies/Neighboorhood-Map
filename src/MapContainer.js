@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MyMap from './MyMap';
 
 export default class MapContainer extends Component {
+
   render() {
     return (
       <MyMap

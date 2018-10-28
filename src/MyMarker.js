@@ -15,16 +15,15 @@ export default class MyMarker extends Component {
     const { isOpen } = this.state;
 
     return(
-      //<div>
         <Marker
           position={this.props.location}
           onClick={() => this.toggle()}
-        />
-
-        // <InfoWindow onCloseClick={ this.toggle() }/>
-        // {isOpen ?
-        //    <div id="infowindow"><p>Ribiera</p></div> : null }
-      // </div>
+        >
+        {this.state.isOpen ?
+          <InfoWindow onCloseClick={() => this.toggle() }>
+            <div>{this.props.name}</div>
+          </InfoWindow> : null }
+        </Marker>
     )
   }
 }

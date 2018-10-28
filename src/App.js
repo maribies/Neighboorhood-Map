@@ -10,7 +10,6 @@ const locations = [
   { name: 'Matosinhos', lat: 41.174567, lng: -8.690689 },
   { name: 'Foz', lat: 41.147474, lng: -8.674626 },
   { name: 'Hood', lat: 41.145861, lng: -8.599972 },
-
 ]
 
 class App extends Component {
