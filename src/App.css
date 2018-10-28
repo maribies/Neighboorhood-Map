@@ -1,5 +1,21 @@
 .title {
+  padding-top: 1rem;
   text-align: center;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .search {
@@ -8,9 +24,12 @@
   padding: 1rem 1rem;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 1rem;
+.search label {
+  padding-right: 1rem;
+  font-size: 1.414em;
+}
+
+.thumb {
+  height: 150px;
+  width: auto;
 }

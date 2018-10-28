@@ -4,13 +4,16 @@ import MapContainer from './MapContainer';
 import InfoBar from './InfoBar';
 import * as UnsplashAPI from './UnsplashAPI';
 
+const locations = [
+  { name: 'Riberia', lat: 41.140473, lng: -8.612381 },
+  { name: 'Alidos', lat: 41.148183, lng: -8.611051 }
+]
+
 class App extends Component {
   state = {
     query: '',
     images: [],
     showError: false,
-    image: [],
-    imagesCollection: {},
   }
 
   componentDidMount() {
@@ -61,7 +64,8 @@ class App extends Component {
           <InfoBar
             onSearch={this.searchImages}
             query={this.getQuery}/>
-          <MapContainer/>
+          <MapContainer
+            locations={locations}/>
         </div>
       </div>
 
