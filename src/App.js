@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import MyMapComponent from './map';
+import MapContainer from './MapContainer';
 import InfoBar from './InfoBar';
 import * as UnsplashAPI from './UnsplashAPI';
 
 class App extends Component {
   state = {
     query: '',
-    image: [],
+    images: [],
     showError: false,
+    image: [],
+    imagesCollection: {},
   }
 
   componentDidMount() {
@@ -21,11 +23,24 @@ class App extends Component {
         showError: true
       })
     })
+
+    // UnsplashAPI.getCollection()
+    // .then((res) => {
+    //   this.setState({imagesCollection})
+    // })
   }
 
-    getQuery(query){
-      this.setState({query})
-    }
+  getQuery(query){
+    this.setState({query})
+  }
+
+  // getImage = (id, size) => {
+  //   UnsplashAPI.getPhotoById()
+  //   .then((image) => {
+  //     this.setState(state => ({image: image.urls.thumb})
+  //   )
+  //   })
+  // }
 
   // searchImages = ( query ) => {
   //   UnsplashAPI.getImage( query ).then((image) => {
@@ -41,17 +56,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>My Neighborhood Map</h1>
-        <InfoBar
-          onSearch={this.searchImages}
-          query={this.getQuery}/>
-          <MyMapComponent
-            isMarkerShown
-            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `750px`, width: `750px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
+        <h1 className="title">My Neighborhood Map</h1>
+        <div className="container">
+          <InfoBar
+            onSearch={this.searchImages}
+            query={this.getQuery}/>
+          <MapContainer/>
+        </div>
       </div>
 
     );
