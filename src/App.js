@@ -4,6 +4,7 @@ import locations from './data/locations.json';
 import MapContainer from './components/MapContainer';
 import InfoBar from './components/InfoBar';
 import * as UnsplashAPI from './UnsplashAPI';
+require('dotenv').config();
 
 class App extends Component {
   state = {
