@@ -10,6 +10,7 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
     location= {{lat:loc.lat, lng: loc.lng }}
     photoId ={loc.photoId}
     imageUrl={props.returnImg(loc, props.collection)}
+    description={loc.description}
     >
     {props.isOpen &&
       <InfoWindow onCloseClick={ props.toggle }>
@@ -20,8 +21,8 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
 
   return (
     <GoogleMap
-      defaultZoom={12}
-      center={{ lat: 41.1579, lng: -8.6291 }}
+      defaultZoom={13}
+      center={{ lat: 41.160577, lng: -8.638517 }}
       locations={props.locations}
       collection={props.collection}
       returnImg={props.returnImg}

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Ribeira",
+    "lat": 41.140473,
+    "lng": -8.612381,
+    "photoId": "uo54m6kgcdI",
+    "description": "The beautiful and lively river front."
+  },
+  {
+    "name": "Aliados",
+    "lat": 41.148183,
+    "lng": -8.611051,
+    "photoId": "gVmbEiXPWiY",
+    "description": "City hall and city center. Perfect for celebrating football championships."
+  },
+  { "name": "Matosinhos",
+    "lat": 41.174567,
+    "lng": -8.690689,
+    "photoId": "FXzjYoDYoGg",
+    "description": "Head here for the beach and some great seafood."
+  },
+  { "name": "Foz do Douro",
+    "lat": 41.146682,
+    "lng": -8.676292,
+    "photoId":"1c1CKTfjOyA",
+    "description": "Picture and fishing perfect."
+  },
+  { "name": "Foz do Douro Estuary",
+    "lat": 41.147474,
+    "lng": -8.674626,
+    "photoId":"MdB_3npfpe8",
+    "description": "Where the ocean meets the sea. Perfect for walks."
+  },
+  { "name": "My Neighborhood",
+    "lat": 41.146146,
+    "lng": -8.606489,
+    "photoId": "FoqDFWEU5wE",
+    "description": "Picture perfect."
+  },
+  { "name": "My Daily View of Clerigos Tower",
+    "lat": 41.146146,
+    "lng": -8.606489,
+    "photoId": "FoqDFWEU5wE",
+    "description": "Can't beat a walk with a view like that."
+  },
+  {
+    "name": "Gaia & Port Wine Cellars",
+      "lat": 41.137838,
+      "lng": -8.612746,
+      "photoId": "Pfrne_5S_-8",
+      "description": "Who can come to Porto without tasting some Port wine?"
+  },
+  {
+    "name": "São Bento",
+      "lat": 41.145632,
+      "lng": -8.610655,
+      "photoId": "DFPN0nbiUSI",
+      "description": "The train station that will take you on more adventures in Portugal."
+  },
+  {
+    "name": "Bolhão Market",
+      "lat": 41.149126,
+      "lng": -8.607223,
+      "photoId": "PeLM5ABXfSM",
+      "description": "The iconic Porto marketplace."
+  }
+]

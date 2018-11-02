@@ -33,3 +33,7 @@
   height: 150px;
   width: auto;
 }
+
+.infoTitle {
+  margin: 0 0 .5rem 0; 
+}
