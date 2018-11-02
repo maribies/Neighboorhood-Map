@@ -14,14 +14,18 @@ export default class MyMarker extends Component {
   render(){
     const { isOpen } = this.state;
 
+    console.log(this.props.imageUrl)
+    console.log(this.props.location)
+
     return(
         <Marker
           position={this.props.location}
           onClick={() => this.toggle()}
+          image={this.props.imageUrl}
         >
         {this.state.isOpen ?
           <InfoWindow onCloseClick={() => this.toggle() }>
-            <div>{this.props.name}</div>
+            <div><img src={this.props.imageUrl} alt={this.props.name}/></div>
           </InfoWindow> : null }
         </Marker>
     )

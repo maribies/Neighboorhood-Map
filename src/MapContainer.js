@@ -10,7 +10,9 @@ export default class MapContainer extends Component {
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `50vh`, width: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
+        collection={this.props.collection}
         locations={this.props.locations}
+        returnImg={this.props.returnImg}
       />
     );
   }

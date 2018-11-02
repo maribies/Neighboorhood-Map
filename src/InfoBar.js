@@ -27,7 +27,7 @@ class InfoBar extends Component {
         </form>
 
         <div className="locInfo">
-          <h4>Riberia</h4>
+          <h4>Ribeira</h4>
           <img className="thumb" src="https://source.unsplash.com/photos/uo54m6kgcdl"/>
         </div>
       </div>

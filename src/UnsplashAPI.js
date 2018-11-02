@@ -6,5 +6,5 @@ export const getImages = () =>
   .then(res => res.json())
 
 export const getCollection = () =>
-  fetch(`${api}collections/2516048/porto/photos/?client_id=${apiKey}`)
+  fetch(`${api}collections/2516048/photos/?per_page=20&client_id=${apiKey}`)
   .then(res => res.json())

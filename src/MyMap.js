@@ -4,13 +4,12 @@ import MyMarker from './MyMarker';
 
 const MyMap = withScriptjs(withGoogleMap((props) => {
 
-  console.log('props', props)
-  console.log('prop', props.isOpen)
-
   const markers = props.locations.map (loc =>
     <MyMarker key={loc.name}
     name={loc.name}
     location= {{lat:loc.lat, lng: loc.lng }}
+    photoId ={loc.photoId}
+    imageUrl={props.returnImg(loc, props.collection)}
     >
     {props.isOpen &&
       <InfoWindow onCloseClick={ props.toggle }>
@@ -24,12 +23,13 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
       defaultZoom={12}
       center={{ lat: 41.1579, lng: -8.6291 }}
       locations={props.locations}
+      collection={props.collection}
+      returnImg={props.returnImg}
     >
     {markers}
     </GoogleMap>
   );
 }
 ))
-
 
 export default MyMap
