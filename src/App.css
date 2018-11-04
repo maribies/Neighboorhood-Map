@@ -10,15 +10,14 @@
   padding: 0 1rem;
 }
 
-.search {
-  align-items: center;
+.infobar {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
   padding-right: 2rem;
 }
 
-.search label {
+.infobar label {
   padding-right: 1rem;
   font-size: 1.414em;
 }
@@ -28,7 +27,7 @@
   width: auto;
 }
 
-.infoTitle {
+.info-title {
   margin: 0 0 .5rem 0;
 }
 

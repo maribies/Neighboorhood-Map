@@ -11,9 +11,8 @@ class App extends Component {
     collection: [],
     images: [],
     data: locations,
-    query: '',
     showError: false,
-    activeMarkers: null,
+    tag: null,
   }
 
   componentDidMount() {
@@ -37,10 +36,6 @@ class App extends Component {
     })
   }
 
-  getQuery(query){
-    this.setState({query})
-  }
-
   returnImg = (location, collection) => {
     const image = collection.find(image => location.photoId === image.id)
       if (image) {
@@ -57,6 +52,10 @@ class App extends Component {
       return null
   };
 
+  updateFilter = (tag) => {
+    this.setState({tag})
+  }
+
   render() {
     return (
       <div className="App">
@@ -68,11 +67,15 @@ class App extends Component {
             returnImg={this.returnImg}
             returnAttr={this.returnAttr}
             onSearch={this.searchImages}
-            query={this.getQuery}/>
+            updateFilter={this.updateFilter}
+            tag={this.state.tag}
+            />
           <MapContainer
             collection={this.state.collection}
             locations={this.state.data}
-            returnImg={this.returnImg}/>
+            returnImg={this.returnImg}
+            tag={this.state.tag}
+            />
         </div>
       </div>
 
