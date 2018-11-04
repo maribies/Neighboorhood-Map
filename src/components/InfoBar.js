@@ -3,9 +3,6 @@ import escapeRegExp from 'escape-string-regexp';
 import LocationCard from './LocationCard';
 
 class InfoBar extends Component {
-
-
-
   render() {
     const {locations, collection, returnImg, returnAttr, updateFilter, tag} = this.props
 

@@ -66,7 +66,6 @@ class App extends Component {
             locations={this.state.data}
             returnImg={this.returnImg}
             returnAttr={this.returnAttr}
-            onSearch={this.searchImages}
             updateFilter={this.updateFilter}
             tag={this.state.tag}
             />
@@ -74,6 +73,7 @@ class App extends Component {
             collection={this.state.collection}
             locations={this.state.data}
             returnImg={this.returnImg}
+            updateFilter={this.updateFilter}
             tag={this.state.tag}
             />
         </div>

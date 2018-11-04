@@ -4,7 +4,16 @@ import MyMarker from './MyMarker';
 
 const MyMap = withScriptjs(withGoogleMap((props) => {
 
-  const markers = props.locations.map (location =>
+  let filtered
+   if (props.tag === null) {
+    filtered = props.locations
+  } else if (props.tag === "All") {
+    filtered = props.locations
+  } else if (props.tag !== null) {
+    filtered = props.locations.filter(location => location.tags.find(loctag => loctag === props.tag))
+  }
+
+  const markers = filtered.map (location =>
     <MyMarker key={location.name}
     coords= {{lat:location.lat, lng: location.lng }}
     location={location}
@@ -28,7 +37,8 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
       collection={props.collection}
       returnImg={props.returnImg}
       role="application"
-
+      updateFilter={props.updateFilter}
+      tag={props.tag}
     >
     {markers}
     </GoogleMap>

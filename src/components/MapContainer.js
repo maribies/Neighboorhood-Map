@@ -15,6 +15,8 @@ export default class MapContainer extends Component {
         collection={this.props.collection}
         locations={this.props.locations}
         returnImg={this.props.returnImg}
+        updateFilter={this.props.updateFilter}
+        tag={this.props.tag}
       />
     );
   }

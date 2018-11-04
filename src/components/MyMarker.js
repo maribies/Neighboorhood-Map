@@ -15,7 +15,7 @@ export default class MyMarker extends Component {
   render(){
     return(
         <Marker
-          defaultAnimation={() => this.props.Animation.BOUNCE}
+          defaultAnimation={Animation.BOUNCE}
           image={this.props.imageUrl}
           position={this.props.coords}
           onClick={() => this.toggle()}
