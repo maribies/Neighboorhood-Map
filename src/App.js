@@ -16,15 +16,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    UnsplashAPI.getImages()
-    .then((images) => {
-      this.setState({images})
-    })
-    .catch(error => {
-      this.setState({
-        showError: true
-      })
-    })
+    //decided not to use this function to retrieve random images of Porto at this time
+    // UnsplashAPI.getImages()
+    // .then((images) => {
+    //   this.setState({images})
+    // })
+    // .catch(error => {
+    //   this.setState({
+    //     showError: true
+    //   })
+    // })
+    //retrieves a collection of photos from porto
     UnsplashAPI.getCollection()
     .then((collection) => {
       this.setState({collection})

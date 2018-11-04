@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import escapeRegExp from 'escape-string-regexp';
 import LocationCard from './LocationCard';
 
 class InfoBar extends Component {
   render() {
-    const {locations, collection, returnImg, returnAttr, updateFilter, tag} = this.props
+    const {collection, returnImg, returnAttr, updateFilter, tag} = this.props
 
     const handleChange = event => {
       updateFilter(event.target.value)
@@ -17,8 +16,6 @@ class InfoBar extends Component {
       filtered = this.props.locations
     } else if (tag !== null) {
       filtered = this.props.locations.filter(location => location.tags.find(loctag => loctag === tag))
-      console.log(tag)
-      console.log(filtered)
     }
 
     return (
@@ -29,7 +26,7 @@ class InfoBar extends Component {
             className="category-select"
             onChange={event => handleChange(event)}>
 
-            <option value="All">Filter</option>
+            <option value="All">Filters</option>
             <option value="Activities">Activities</option>
             <option value="Drinks">Drinks</option>
             <option value="Eats">Eats</option>

@@ -29,6 +29,7 @@
 
 .info-title {
   margin: 0 0 .5rem 0;
+  max-width: 250px;
 }
 
 .results {
@@ -46,9 +47,21 @@
   margin-bottom: .5rem;
 }
 
+
 @media (min-width: 768px) {
   .container {
+    padding: 0 4rem;
+  }
+
+  .results {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
     justify-content: flex-start;
     padding: 0 4rem;
   }

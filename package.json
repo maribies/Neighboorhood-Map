@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "dotenv": "6.1.0",
-    "escape-string-regexp": "1.0.5",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-google-maps": "9.4.5",

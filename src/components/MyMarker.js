@@ -15,7 +15,7 @@ export default class MyMarker extends Component {
   render(){
     return(
         <Marker
-          defaultAnimation={Animation.BOUNCE}
+          animation={() => this.props.animation}
           image={this.props.imageUrl}
           position={this.props.coords}
           onClick={() => this.toggle()}
@@ -26,6 +26,7 @@ export default class MyMarker extends Component {
               location={this.props.location}
               collection={this.props.collection}
               imageUrl={this.props.imageUrl}
+              isOpen={this.state}
               />
           </InfoWindow> : null }
         </Marker>

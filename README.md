@@ -4,7 +4,7 @@ Is a required assessment for the Udacity Front-End Nanodegree certification. It 
 
 ## About
 
-This application is a single page app featuring Porto, Portugal. It features map markers to identify must see places, search functionality to discover more about these places. The map is from the Google Maps API and the Unslpash API for more information about each place.
+This application is a single page app featuring Porto, Portugal. It features map markers to identify must see places, and a filter functionality to filter each location by a user selected category. The map is from the Google Maps API and the images for each must see location come from the Unslpash API.
 
 Created with Create React App - (https://github.com/facebook/create-react-app/)
 
@@ -26,5 +26,6 @@ Open for code review & pull requests after the challenge has been submitted, rev
 5. [How to add Google Maps w/o external component.. wish I would have seen this first! For a future challenge...](https://www.youtube.com/watch?v=W5LhLZqj76s)
 6. [Unsplash API](https://unsplash.com/documentation#getting-started)
 7. [Udacity project walkthrough](https://www.youtube.com/watch?v=NVAVLCJwAAo&feature=youtu.be)
+8. [Keep API keys secret on future projects](https://www.npmjs.com/package/dotenv)
 
 Special shout outs to my mentor, Filipa, & friend, Robbie, for extra motivational pep talks and help with unblocking!

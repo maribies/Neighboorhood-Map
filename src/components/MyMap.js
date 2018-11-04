@@ -19,7 +19,7 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
     location={location}
     imageUrl={props.returnImg(location, props.collection)}
     collection={props.collection}
-    defaultAnimation={() => this.Animation.BOUNCE}
+    animation={Animation.DROP}
     >
     {props.isOpen &&
       <InfoWindow onCloseClick={ props.toggle }>
@@ -31,7 +31,7 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
   return (
     <GoogleMap
       aria-label="map"
-      center={{ lat: 41.160577, lng: -8.638517 }}
+      center={{ lat: 41.151006, lng: -8.624265 }}
       defaultZoom={13}
       locations={props.locations}
       collection={props.collection}
