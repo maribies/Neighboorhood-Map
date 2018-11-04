@@ -13,6 +13,7 @@ class App extends Component {
     data: locations,
     query: '',
     showError: false,
+    activeMarkers: null,
   }
 
   componentDidMount() {
@@ -42,15 +43,30 @@ class App extends Component {
 
   returnImg = (location, collection) => {
     const image = collection.find(image => location.photoId === image.id)
-      return image.urls.thumb || 'no image found';
+      if (image) {
+        return image.urls.thumb || 'no image found';
+      }
+      return null
+  };
+
+  returnAttr = (location, collection) => {
+    const image = collection.find(image => location.photoId === image.id)
+      if (image) {
+        return image.user.name || 'no photographer found';
+      }
+      return null
   };
 
   render() {
     return (
       <div className="App">
-        <h1 className="title">Porto, Portugal</h1>
+        <h2 className="title">Porto, Portugal</h2>
         <div className="container">
           <InfoBar
+            collection={this.state.collection}
+            locations={this.state.data}
+            returnImg={this.returnImg}
+            returnAttr={this.returnAttr}
             onSearch={this.searchImages}
             query={this.getQuery}/>
           <MapContainer

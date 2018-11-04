@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import escapeRegExp from 'escape-string-regexp';
+import LocationCard from './LocationCard';
 
 class InfoBar extends Component {
   state = {
@@ -13,6 +14,7 @@ class InfoBar extends Component {
 
   render() {
     const { query } = this.props.query
+    const {locations, collection, returnImg, returnAttr} = this.props
 
     if (query) {
       let checkQuery = new RegExp(escapeRegExp(query), 'i')
@@ -26,9 +28,16 @@ class InfoBar extends Component {
           <input value={this.state.query} onChange={(event) => this.updateQuery(event.target.value)}/>
         </form>
 
-        <div className="locInfo">
-          <h4>Ribeira</h4>
-          <img className="thumb" src="https://source.unsplash.com/photos/uo54m6kgcdl"/>
+        <div className="results">
+          {locations.map(location => (
+            <LocationCard
+              location={location}
+              collection={collection}
+              imageUrl={returnImg(location, this.props.collection)}
+              photographer={returnAttr(location, this.props.collection)}
+              key={location.name}
+            />
+          ))}
         </div>
       </div>
     );

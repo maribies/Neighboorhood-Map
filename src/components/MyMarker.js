@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Marker, InfoWindow } from 'react-google-maps';
+import LocationCard from './LocationCard';
 
 export default class MyMarker extends Component {
   constructor(props) {
@@ -12,21 +13,20 @@ export default class MyMarker extends Component {
   }
 
   render(){
-    const { isOpen } = this.state;
-
     return(
         <Marker
-          position={this.props.location}
-          onClick={() => this.toggle()}
+          defaultAnimation={() => this.props.Animation.BOUNCE}
           image={this.props.imageUrl}
+          position={this.props.coords}
+          onClick={() => this.toggle()}
         >
         {this.state.isOpen ?
           <InfoWindow onCloseClick={() => this.toggle() }>
-            <div>
-              <h4 className="infoTitle">{this.props.name}</h4>
-              <img src={this.props.imageUrl} alt={this.props.name}/>
-              <p>{this.props.description}</p>
-            </div>
+            <LocationCard
+              location={this.props.location}
+              collection={this.props.collection}
+              imageUrl={this.props.imageUrl}
+              />
           </InfoWindow> : null }
         </Marker>
     )

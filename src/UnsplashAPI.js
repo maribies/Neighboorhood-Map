@@ -1,5 +1,6 @@
 const api = 'https://api.unsplash.com/';
 const apiKey = process.env.REACT_APP_UNSPLASH_KEY;
+
 export const getImages = () =>
   fetch(`${api}search/photos?page=1/&query=porto&client_id=${apiKey}`)
   .then(res => res.json())
